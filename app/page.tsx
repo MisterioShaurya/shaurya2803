@@ -4,12 +4,30 @@ import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 
 export default function Home() {
-  const [isDark, setIsDark] = useState(true)
+  const [isDark, setIsDark] = useState(false)
   const [activeSection, setActiveSection] = useState("")
   const sectionsRef = useRef<(HTMLElement | null)[]>([])
 
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDark)
+  const savedTheme = localStorage.getItem("theme")
+
+  if (savedTheme) {
+    setIsDark(savedTheme === "dark")
+  } else {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+    setIsDark(prefersDark)
+  }
+  }, [])
+
+
+  useEffect(() => {
+  if (isDark) {
+    document.documentElement.classList.add("dark")
+    localStorage.setItem("theme", "dark")
+  } else {
+    document.documentElement.classList.remove("dark")
+    localStorage.setItem("theme", "light")
+  }
   }, [isDark])
 
   useEffect(() => {
@@ -293,10 +311,10 @@ export default function Home() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { name: "GitHub", handle: "@shauryadeep", url: "https://github.com" },
-                  { name: "LinkedIn", handle: "shauryadeep", url: "https://linkedin.com" },
-                  { name: "Twitter", handle: "@shauryadeep", url: "https://twitter.com" },
-                  { name: "Email", handle: "shaurya@snappitch.in", url: "mailto:shaurya@snappitch.in" },
+                  { name: "GitHub", handle: "@MisterioShaurya", url: "https://github.com/MisterioShaurya/" },
+                  { name: "LinkedIn", handle: "shauryadeep", url: "https://www.linkedin.com/in/shaurya-deep/" },
+                  { name: "Instagram", handle: "@isleshaurya", url: "https://www.instagram.com/isleshaurya/" },
+                  { name: "Email", handle: "amiableshaurya@gmail.com", url: "mailto:amiableshaurya@gmail.com" },
                 ].map((social) => (
                   <Link
                     key={social.name}

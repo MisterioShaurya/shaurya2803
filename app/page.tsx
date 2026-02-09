@@ -75,7 +75,7 @@ export default function Home() {
         <header
           id="intro"
           ref={(el) => (sectionsRef.current[0] = el)}
-          className="min-h-screen flex items-center justify-center py-16 sm:py-20 lg:py-0 opacity-0"
+          className="min-h-[100svh] flex items-start sm:items-center pt-[35vh] sm:pt-0 opacity-0"
         >
           <div className="grid lg:grid-cols-5 gap-12 sm:gap-16 w-full items-center">
             <div className="lg:col-span-3 space-y-6 sm:space-y-8">

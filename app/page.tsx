@@ -227,7 +227,7 @@ export default function Home() {
                 },
                 {
                   title: "Young Entrepreneurs: Building in Your Teens",
-                  excerpt: "Real insights on what it's like to be a 16-year-old founder, the advantages, challenges, and lessons learned.",
+                  excerpt: "Real insights into the journey of building a startup — the advantages, challenges, and lessons learned along the way.",
                   date: "Dec 2025",
                   readTime: "5 min",
                 },

@@ -147,26 +147,44 @@ export default function Home() {
 
             <div className="space-y-8 sm:space-y-12">
               {[
-                {
-                  year: "2024",
-                  role: "Founder & Product Builder",
-                  company: "SnapPitch.in",
-                  description: "Platform where people with business ideas connect with collaborators and teams to build startups together. An entrepreneur-focused social and collaboration ecosystem.",
-                  tech: ["Next.js", "React", "Python", "Web Dev"],
-                },
-                {
-                  year: "2025",
-                  role: "Full Stack Developer",
-                  company: "Multiple Tech Projects",
-                  description: "Exploring full-stack web development, cybersecurity research, and 3D modeling. Building foundational skills for future ventures.",
-                  tech: ["JavaScript", "Python", "Cybersecurity", "3D Modeling"],
-                },
-                {
-                  year: "2026",
-                  role: "Founder (Product Vision)",
-                  company: "Studimate (Upcoming)",
-                  description: "Developing a student-focused platform designed to foster collaboration, learning, and community building among learners.",
-                  tech: ["Next.js", "React", "Node.js", "Design"],
+  {
+    year: "2024",
+    role: "Founder & Product Builder",
+    company: "SnapPitch.in",
+    description:
+      "A platform where people with business ideas connect with collaborators and teams to build startups together. Focused on enabling entrepreneurs to find co-founders and launch real ventures.",
+    tech: ["Next.js", "React", "Python", "Startup Ecosystem"],
+  },
+
+  {
+    year: "2025",
+    role: "Founder & SaaS Developer",
+    company: "Multi-Industry Management Systems",
+    description:
+      "Designed and deployed multiple management system platforms for different industries including schools, restaurants, and small businesses. These systems include features like billing and order management, attendance tracking, staff and inventory management, reporting dashboards, and role-based access for administrators and staff.",
+    tech: [
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "Role-Based Access",
+      "SaaS Systems",
+      "Inventory & Billing",
+    ],
+  },
+
+  {
+    year: "2026",
+    role: "Founder (Product Development)",
+    company: "Studinest — One Pass Library System",
+    description:
+      "Currently developing Studinest, a One Pass Library System that allows students to access and manage multiple libraries using a single digital pass. The platform also includes a student community designed for collaboration, communication, and shared learning.",
+    tech: [
+      "Next.js",
+      "React",
+      "Node.js",
+      "Community Platform",
+      "Library System",
+    ],
                 },
               ].map((job, index) => (
                 <div
